@@ -17,7 +17,7 @@ const config = require('./config');
 const redisConfig = {
 	redis: {
 		port: config.REDIS_PORT,
-		host: config.REDIS_HOST,
+		host: config.REDIS_HOSTNAME,
 		db: config.REDIS_DB,
 		...(config.REDIS_PASSWORD && {password: config.REDIS_PASSWORD}),
 		tls: config.REDIS_USE_TLS === 'true',

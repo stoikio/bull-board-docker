@@ -6,7 +6,7 @@ COPY ./package.json .
 COPY ./yarn.lock .
 
 ENV NODE_ENV production
-ENV REDIS_HOST localhost
+ENV REDIS_HOSTNAME localhost
 ENV REDIS_PORT 6379
 ENV REDIS_USE_TLS false
 ENV REDIS_PASSWORD ''
