@@ -3,7 +3,7 @@ FROM node:16.13-alpine
 WORKDIR /usr/app
 
 COPY ./package.json .
-COPY ./yarn.lock .
+COPY ./package-lock.json .
 
 ENV NODE_ENV production
 ENV REDIS_HOSTNAME localhost
@@ -17,7 +17,7 @@ ENV USER_PASSWORD ''
 ENV REDIS_DB 0
 ENV PROXY_PATH ''
 
-RUN yarn install
+RUN npm install
 
 COPY . .
 
